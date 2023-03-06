@@ -1,5 +1,10 @@
 package baekjoon.stage1;
 
+/**
+ * 정수 / 정수 = 정수
+ * 실수 / 실수 = 실수
+ * **/
+
 import java.io.*;
 
 public class B1008_divide {
