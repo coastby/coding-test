@@ -3,7 +3,6 @@ package baekjoon.ch8_문자열;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class N2_9046_복호화 {
 
