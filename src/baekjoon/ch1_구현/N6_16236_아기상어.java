@@ -9,10 +9,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/**
- * 가장 처음 아기 상어 크기 2
- *
- * **/
 public class N6_16236_아기상어 {
 	static int N;
 	static int[][] space;
