@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class N4_1764_듣보잡 {
+public class N5_1764_듣보잡 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

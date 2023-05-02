@@ -8,44 +8,34 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class N5_14426_접두사찾기 {
-	static int N;
-	static String[] S;
+public class N8_14425_문자열집합 {
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		N = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
-		S = new String[N];
+		List<String>[] wordHash = new List[500];
+		Arrays.fill(wordHash, new ArrayList<String>());
 		for (int i = 0; i < N; i++) {
-			String line = br.readLine();
-			S[i] = line;
+			String word = br.readLine();
+			wordHash[hash(word)].add(word);
 		}
-		Arrays.sort(S);
 		int count = 0;
 		for (int i = 0; i < M; i++) {
-			String pre = br.readLine();
-			if (find(pre)) count++;
+			String word= br.readLine();
+			List<String> hashList = wordHash[hash(word)];
+			if (hashList.contains(word)) count++;
 		}
 		System.out.println(count);
 	}
 
-	static boolean find(String pre) {
-		int start = 0;
-		int end = N-1;
-		while (start <= end) {
-			int mid = (start + end) / 2;
-			String now = S[mid];
-			int isPre = pre.compareTo(now.substring(0, pre.length()));
-			if (isPre == 0) {
-				return true;
-			} else if (isPre > 0){
-				start = mid + 1;
-			} else {
-				end = mid - 1;
-			}
+	static int hash(String word){
+		int num = 0;
+		for (int i = 0; i < word.length(); i++) {
+			num += word.charAt(i) * i;
 		}
-		return false;
+		return num % 500;
 	}
 
 }
