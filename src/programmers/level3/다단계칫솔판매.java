@@ -43,10 +43,6 @@ class Seller {
 		return this.total;
 	}
 
-	String getName() {
-		return this.name;
-	}
-
 	void profit(int sales) {
 		int per = (int) Math.floor(sales / 10.0);
 		plusTotal(sales - per);
