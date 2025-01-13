@@ -1,3 +1,7 @@
+package leetcode;
+
+import java.util.*;
+
 class N88_Merge_Sorted_Array {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int p1 = 0;
